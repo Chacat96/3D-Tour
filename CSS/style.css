@@ -1,0 +1,1167 @@
+ /* ********************************************* BODY ********************************************* */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bahnschrift';
+  }
+
+html {
+  min-width: 100%;
+
+}
+body {
+    height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+main {
+    display: flex;
+    background-image: url(../IMG/image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+
+  /* *********************************************** HEADER ****************************************** */
+  
+header {
+    display: flex;
+    background-color: #ececec;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    /* border-bottom: 3px solid #ff8c00; */
+    position: sticky;
+}
+
+nav {
+    width: 100%;
+    display: flex;    
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid #ff8c00;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #072841;
+    font-weight: bold;
+    cursor: grab;
+    
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 0;
+    margin: 0 20px;
+
+}
+
+.mobile {
+  display: none;
+}
+
+.menu a:hover {
+    color: #ff8c00;
+    transition: 1s;
+}
+
+.menu img {
+    width: 3%;
+}
+
+/* ************************************************** ACCUEIL ************************************************************** */
+
+
+.BackgroundVideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.accueil {
+  background-image: none;
+}
+
+/* ************************************************* RECHERCHER UN BIEN **************************************************************** */
+
+#home {
+    background-image: url(../IMG/salon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(7, 40, 65, 0.84);
+    border: 2px solid #D0CECE;
+    border-radius: 44px;
+    padding: 20px;
+    width: 50%;
+    height: 90%;
+    margin: auto;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+  }
+
+ .formulaire label {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 45px;
+  }
+
+  .formulaire input {
+    width: 30%;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    margin:auto;
+    padding: 15px;
+  }
+
+  .formulaire button {
+    background-color: #fdfdfd;
+    color: #ff8c00;
+    border: none;
+    height: 40px;
+    width: 30%;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: grab;
+  }
+
+  button a {
+    text-decoration: none;
+    color: #0A3D62;
+  }
+
+  .formulaire button, a:hover {
+    color: #ff8c00;
+    transition: 1s;
+  }
+
+  .checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+.checkbox .check{
+    background: #fff;
+    width: 29%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+  }
+
+  input[type="radio"]{
+    display: none;
+  }
+  #maison:checked:checked ~ .option-1,
+  #appart:checked:checked ~ .option-2{
+    border-color: #ff8c00;
+    background: #ff8c00;
+  }
+
+
+  .checkbox .check span{
+    font-size: 20px;
+    color: #808080;
+  }
+  #maison:checked:checked ~ .option-1 span,
+  #appart:checked:checked ~ .option-2 span{
+    color: #fff;
+  }
+  
+#surface input{
+    width: calc(80% - 78px);
+}
+
+
+#pieces input{
+  width: calc(80% - 190px);
+}
+
+#lieu input{
+  width: calc(80% - 45px);
+}
+
+#prix input{
+  width: calc(80% - 45px);
+}
+
+.formulaire input:focus {
+    outline: none;
+    border: 2px solid #ff8c00;
+}
+
+/* ************************************************* CONTACT **************************************************************** */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  width: 80%;
+}
+
+.contact label {
+  font-size: 15px;
+  color: #808080;
+}
+
+.contact img {
+  width: 30%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+#contact input{
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  box-shadow: #575656 2px 2px 8px;
+  background-color: transparent;
+  border: none;
+  border-right: #ff8c00 10px solid;
+}
+
+#contact input:focus{
+  outline: none;
+}
+
+.un {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 50px;
+  width: 100%;
+}
+
+.un #objet {
+  height: 150px;
+}
+
+.inscri {
+  margin: 0 auto;
+  color: white;
+}
+
+/* ************************************************* CONNEXION **************************************************************** */
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.connect input{
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: #575656 2px 2px 8px;
+  background-color: transparent;
+  border: none;
+  border-right: #0A3D62 5px solid;
+  margin-top: 30px;
+  padding: 20px;
+  width: 80%;
+}
+
+.connect input:focus {
+  outline: none;
+  border-right: #ff8c00 5px solid;
+}
+
+.connect input::placeholder {
+  color: rgb(143, 143, 143);
+  font-size: 15px;
+}
+
+.connect input:focus::placeholder {
+  color: transparent;
+}
+
+.connect img {
+  width: 50%;
+}
+
+.inscri {
+  background-color: #0A3D62;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 40%;
+  margin: 5px;
+}
+
+.connect button{
+  background-color: #0A3D62;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 40%;
+  margin: 40px auto;
+}
+
+.connect button:focus{
+  background-color: #ff8c00;
+  color: white;
+}
+
+.inscri a{
+  text-decoration: none;
+  color: white;
+}
+
+.connexion {
+  background-color:transparent;
+  color: #072841;
+  border: none;
+  font-weight: bolder;
+  font-size: 17px;
+  border-radius: 10px;
+  height: 30px;
+  width: 40%;
+  margin-top: 20px;
+}
+
+.connexion:hover {
+  cursor: pointer;
+}
+
+/* ************************************************* CONNEXION ADMIN **************************************************************** */
+
+/* ************************************************* CONNEXION DIRECTEUR **************************************************************** */
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: 5% auto;
+}
+
+.admin img {
+  width: 30%;
+}
+
+.connect_admin{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+  gap: 50px;
+}
+
+.connect_admin button{
+  height: 70px;
+  width: 40%;
+  color: #0A3D62;
+  background-color: #e5e5e5;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+  border: none;
+  border-bottom: #0A3D62 5px solid;
+  cursor: pointer;
+}
+
+.connect_admin button:hover {
+  color: #ff8c00;
+  border-bottom: #ff8c00 5px solid;
+  transition: 1.5s;
+}
+
+/* ************************************************* VUE CLIENTS **************************************************************** */
+
+.container_vue_clients {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 5% auto;
+}
+
+.container_vue_clients img{
+  width: 25%;
+}
+
+.list_clients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.list_clients th, td{
+  width: 25%;
+  margin: 15px;
+  padding: 20px;
+  border: none;
+  background-color: #e7e7e7;
+  border-bottom: 5px solid #0A3D62;
+  border-radius: 10px;  
+}
+
+.list_clients a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.list_clients table {
+  border-spacing: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.list_clients tbody {
+  width: 100%;
+}
+
+.list_clients input:focus{
+  outline: none;
+  border-bottom: 5px solid #ff8c00;
+}
+
+/* ************************************************* CREATION CLIENT **************************************************************** */
+/* ************************************************* SELECTION CLIENT **************************************************************** */
+/* ************************************************* DIRECTEUR NOUVEL EDITEUR **************************************************************** */
+
+.container_creation_client {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 5% auto;
+}
+
+.container_creation_client td, th {
+  width: 10%;
+  text-align: center;
+ }
+ .container_creation_client a {
+  text-decoration: none;
+  color: black;
+ }
+
+.container_nouvel_editeur {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 5% auto;
+}
+
+.container_nouvel_editeur img {
+  width: 40%;
+}
+
+.container_creation_client img {
+  width: 25%;
+}
+
+.container_creation_client h1 {
+  
+  font-size: 20px;
+}
+
+#logo_selection_client {
+  width: 20%;
+}
+
+.infoClient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.infoClient input {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  border: none;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  border-bottom: 6px solid #0A3D62;
+}
+
+.infoClient input:focus{
+  outline: none;
+  border-bottom: 4px solid #ff8c00;
+}
+
+#btn_client {
+  width: 30%;
+  margin-top: 30px;
+}
+
+/* ************************************************* DIRECTEUR STATISTIQUES **************************************************************** */
+
+.directeur_statistiques {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 5% auto;
+}
+
+.directeur_statistiques img {
+  width: 30%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.stats input {
+  width: 35%;
+  padding: 20px;
+  margin: 15px;
+  border: none;
+  background-color: #e4e4e4;
+  border-bottom: 6px solid #0A3D62;
+  border-radius: 10px;
+}
+
+.stats input:focus{
+  outline: none;
+  border-bottom: 4px solid #ff8c00;
+}
+
+/* ************************************************* INSCRIPTION **************************************************************** */
+
+.form_inscri img {
+  width: 40%;
+}
+
+.form_inscri {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin:50px auto;
+}
+
+.form_inscri input {
+  margin: 10px;
+}
+
+.form_inscri input:focus {
+  outline: none;
+  border-right: #ff8c00 5px solid;
+}
+
+input:focus::placeholder{
+  color: transparent;
+}
+
+input::placeholder{
+  color: #ababab;
+  font-size: 15px;
+}
+
+.form_inscri button {
+  width: 30%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 19px;
+}
+
+#form_inscri {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.inscriBlock1 input, .inscriBlock2 input {
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  border-right: #0A3D62 5px solid;
+  background-color: #d2d2d2;
+  padding: 20px;
+  width: 90%;
+}
+
+.inscri:hover{
+  background-color: #ff8c00;
+  transition: 1s;
+}
+
+/* ************************************************* BIENS DISPOS **************************************************************** */
+
+.biensDispos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.biens_criteres {
+  width: 30%;
+  background-color: #e4e4e4;
+  padding: 2%;
+  margin-bottom: 35px;
+  border-radius: 20px;
+  border-bottom: transparent 4px solid;
+}
+
+.biens_criteres:hover {
+  border-bottom: #ff8c00 4px solid;
+}
+
+.biensDispos img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px 10px 0 0;
+}
+
+.biensDispos .biens_p {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+}
+/* ************************************************* SELECTION BIEN **************************************************************** */
+.container_selection_bien{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 60%;
+  height: 70%;
+  gap: 4%;
+}
+
+.container_selection_bien img{
+  width: 70%;
+  border-left:#ff8c00 6px solid ;
+  box-shadow: #b9b9b9 7px 7px 13px;
+}
+
+.button_selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.button_selection button {
+  background-color: #0A3D62;
+  color: white;
+  box-shadow: #808080 7px 7px 13px;
+  border-radius: 10px;
+  border: none;
+  min-height: 60px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button_selection button:hover {
+  background-color: #ff8c00;
+  transition: 1s;
+}
+
+.button_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10%;
+  width: 100%;
+}
+
+.button_icon i {
+  font-size: 25px;
+  color: #bebebe;
+}
+
+.arrow {
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: #808080;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: #ff8c00;
+  transition: 1s;
+}
+
+/* ************************************************* AJOUT BIEN **************************************************************** */
+
+.ajout_bien {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 30px;
+  text-align: center;
+}
+
+.ajout_bien h1 {
+  color: #444444;
+}
+
+.ajout_img {
+  margin-bottom: 50px;
+}
+
+.ajout_bien img {
+  width: 15%;
+}
+
+.bien_select{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bien_select #adresse, #ville {
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #0A3D62;
+  color: #072841;
+  background-color: white;
+  width: 70%;
+}
+
+.bien_select #adresse, #ville:focus {
+  outline: none;
+  border: 2px solid #ff8c00;
+}
+
+.bien_select select:focus{
+  outline: none;
+  border: 2px solid #ff8c00;
+}
+
+.bien_select select, option{
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #0A3D62;
+  color: #072841;
+}
+
+.bien_select label{
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.block_ajout_bien {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.block1_ajout_bien{
+  width: 45%;
+}
+
+.block2_ajout_bien {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 45%;
+  margin: 0;
+}
+
+.button_editeur {
+  background-color: #fdfdfd;
+  color: #ff8c00;
+  border: none;
+  height: 40px;
+  width: 30%;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  cursor: grab;
+}
+
+/* ************************************************* BOUTON **************************************************************** */
+
+.boutons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.boutons img {
+  width: 30%;
+}
+
+.boutons button {
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: #0A3D62;
+  color: #e5e5e5;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.boutons button:hover {
+  background-color: #ff8c00;
+  transition: 1s;
+}
+
+.boutons a {
+  width: 40%;
+  margin: 10px;
+}
+
+.btn_page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ************************************************* FOOTER **************************************************************** */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0A3D62;
+    border-top: 4px solid #ff8c00;
+    min-height: 80px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ************************************************* RESPONSIVE **************************************************************** */
+
+/* ************************************************* RESPONSIVE ACCUEIL **************************************************************** */
+
+@media screen and (max-width: 534px) {
+
+  /* HEADER */
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: flex;
+    }
+
+    .menu img {
+      width: 10%;
+      margin: 10px;
+    }
+
+    header {
+      width: 100%;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    /* ACCUEIL */
+
+    .BackgroundVideo {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* RECHERCHER UN BIEN */
+
+    .formulaire {
+      width: 90%;
+      border-radius: 30px;
+      border: 4px solid #ff8c00;
+    }
+
+    #form {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      justify-content: space-evenly;
+    }
+
+    #form input {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    #form label {
+      text-align: start;
+      margin: 0;
+      font-size: 17px;
+    }
+
+    #form button {
+      width: 50%;
+      margin: 15px auto;
+    }
+
+    .checkbox .check {
+      width: 100%;
+    }
+
+    .checkbox label {
+      display: none;
+    }
+
+    /* BIENS DISPOS */
+
+    .biens_criteres {
+      width: 48%;
+      gap: 20px;
+    }
+
+    .biens_criteres img {
+      object-fit: cover;
+      height: 150px;
+    }
+
+    .biensDispos {
+      width: 100%;
+      margin: 30px auto;
+    }
+
+    /* SELECTION BIEN */
+
+    .container_selection_bien {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .container_selection_bien img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .button_icon button{
+      width: 100%;
+      height: 70px;
+    }
+
+    .button_icon {
+      width: 100%;
+      
+    }
+
+    .button_icon i {
+      display: none;
+    }
+
+    .button_selection {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* CONTACT */
+
+    .contact img {
+      width: 50%;
+    }
+
+    .contact {
+      width: 90%;
+    }
+
+    .contact .un {
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    .contact button {
+      width: 100%;
+      color: white;
+      margin: 0;
+    }
+
+    form .inscri:focus {
+      background-color: #ff8c00;
+    }
+
+   #contact {
+    width: 100%;
+   }
+
+    /**CONNEXION ADMIN**/
+
+    .connect_admin{
+      width: 100%;
+    }
+
+    .connect_admin button{
+      width: 100%;
+    }
+
+
+/**INSCRIPTION CLIENT**/
+
+  .form_inscri {
+    width: 80%;
+    margin:50px auto;
+  }
+
+/**VUE CLIENT**/
+.list_clients input {
+  width: 50%;
+  font-size: 0.5rem;
+}
+
+/**NOUVEL EDITEUR**/
+.container_nouvel_editeur {
+  width: 100%;
+  margin: 5% auto;
+}
+
+.infoClient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/**CREATION CLIENT**/
+.container_creation_client {
+  width: 100%;
+  margin: 5% auto;
+}
+
+.infoClient  {
+  width: 40%;
+}
+
+/**STATISTIQUES**/
+.directeur_statistiques {
+  width: 100%;
+  margin: 5% auto;
+}
+
+/**AJOUT D'UN BEN**/
+.block_ajout_bien {
+  flex-direction: column;
+}
+
+.bien_select {
+width: 150%; 
+}
+
+.bien_select label {
+width: 150%;
+}
+
+.block_ajout_bien {
+width: 150%;
+}
+
+.bien_select label {
+text-align: start;
+}
+
+
+    /* FOOTER */
+
+    footer {
+      font-size: 12px;
+      width: 100%;
+      max-height: 100px;
+    }
+    
+  }
